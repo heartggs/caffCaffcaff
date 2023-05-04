@@ -1,9 +1,0 @@
-.signUpWrapper {
-  display: flex;
-  flex-direction: column;
-}
-
-.topArea {
-  display: flex;
-  justify-content: space-between;
-}

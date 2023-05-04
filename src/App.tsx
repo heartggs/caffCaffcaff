@@ -1,24 +1,20 @@
 import "./app.css";
-import Login from "./view/LoginPage";
 import MainPage from "./view/MainPage";
-import SignUpPage from "./view/SignUpPage";
-import SearchPage from "./view/SearchPage";
-import FavoritePage from "./view/FavoritePage";
-import NotamemberPage from "./view/NotamemberPage";
-import MyinfoPage from "./view/MyinfoPage";
-import app from "./firebase/firebase";
+import { app } from "./Firebase.ts";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import LoginPage from "./view/LoginPage";
 
 function App() {
+  console.log(app);
   return (
-    <>
-      {/* <MainPage /> */}
-      {/* <Login /> */}
-      <SignUpPage />
-      {/* <SearchPage /> */}
-      {/* <FavoritePage /> */}
-      {/* <NotamemberPage /> */}
-      {/* <MyinfoPage /> */}
-    </>
+    <div className="App">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<MainPage />} />
+          <Route path="/logIn" element={<LoginPage />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 
