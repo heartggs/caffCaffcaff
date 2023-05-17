@@ -1,8 +1,17 @@
 import styles from "../assets/css/NotamemberPage.module.css";
 import Nav from "../components/Nav";
 import SearchArea from "../components/SearchArea";
+import { useNavigate } from "react-router-dom";
 
 export default function NotamemberPage() {
+  const navigate = useNavigate();
+  const handleGoBack = () => {
+    navigate("/");
+  };
+  const handleGoSign = () => {
+    navigate("/signUp");
+  };
+
   return (
     <div className={styles.body}>
       <SearchArea />
@@ -19,11 +28,15 @@ export default function NotamemberPage() {
           <p>저희 캪의 회원이 되어주시겠어요?</p>
         </div>
         <div className={styles.buttonGroup}>
-          <button className={styles.btnNo}>아니요</button>
-          <button className={styles.btnYes}>네!</button>
+          <button className={styles.btnNo} onClick={handleGoBack}>
+            아니요
+          </button>
+          <button className={styles.btnYes} onClick={handleGoSign}>
+            네!
+          </button>
         </div>
       </div>
-      <Nav />
+      <Nav selectecdNav="" />
     </div>
   );
 }

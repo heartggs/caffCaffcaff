@@ -1,7 +1,8 @@
 .contentWrapper {
-  min-height: calc(775px - 130px - 80px);
+  height: 35.5rem;
   margin: 2rem 1rem;
   background-color: #c5baaa;
+  border-radius: 2rem;
 }
 
 .backGround {
@@ -20,7 +21,6 @@
 .circleArea {
   width: 152px;
   height: 152px;
-  margin-top: 1.5rem;
   border-radius: 50%;
   background-color: gray;
 }
@@ -49,4 +49,28 @@
   margin-top: 1rem;
   font-size: 2rem;
   font-weight: 900;
+}
+
+.logoutBtn {
+  background-color: #806d61;
+  border: none;
+  width: 12rem;
+  padding: 1rem;
+  border-radius: 3rem;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 3rem;
+}
+
+.editBtn {
+  background-color: transparent;
+  border: none;
+  width: 2rem;
+  height: 2rem;
+  margin-left: auto;
+}
+
+.nicknameArea :first-child {
+  margin-bottom: 0.5rem;
 }

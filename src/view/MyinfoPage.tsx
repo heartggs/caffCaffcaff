@@ -8,7 +8,7 @@ export default function MyinfoPage() {
     <div className={styles.body}>
       <SearchArea />
       <MyInfo />
-      <Nav />
+      <Nav selectecdNav="myinfo" />
     </div>
   );
 }

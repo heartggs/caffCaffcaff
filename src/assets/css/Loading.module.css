@@ -1,0 +1,73 @@
+.loadingWrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgb(0 0 0 / 40%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.lodingCoffee {
+  width: 4rem;
+}
+
+.loadingText {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  color: #fff;
+  transform: translateY(-50%);
+  font-size: 1rem;
+}
+
+.textLoading {
+  position: relative;
+  margin-right: 0.5rem;
+}
+
+.textLoading span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 2rem;
+}
+
+@keyframes wave {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-1.5rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.textLoading {
+  animation: wave 1.5s ease-in-out infinite;
+}
+
+.textLoading:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.textLoading:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.textLoading:nth-child(3) {
+  animation-delay: 0.6s;
+}

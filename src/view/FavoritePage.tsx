@@ -8,7 +8,7 @@ export default function FavoritePage() {
     <div className={styles.body}>
       <SearchArea />
       <Favorite />
-      <Nav />
+      <Nav selectecdNav="favorite" />
     </div>
   );
 }

@@ -8,7 +8,7 @@ export default function SearchPage() {
     <div className={styles.body}>
       <SearchArea />
       <SearchContent />
-      <Nav />
+      <Nav selectecdNav="search" />
     </div>
   );
 }

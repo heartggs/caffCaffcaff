@@ -12,8 +12,36 @@
   align-items: center;
 }
 
+.navItem span {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
 .icon {
   width: 1.8rem;
   height: 1.8rem;
   margin-bottom: 0.5rem;
+}
+
+.styleNone {
+  color: #2c2c2c;
+  text-decoration: none;
+}
+
+.LogoutBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+.LogoutBtn .icon {
+  margin-bottom: 0.4rem;
+}
+
+.selected {
+  border-bottom: 3px solid #ee7828;
 }

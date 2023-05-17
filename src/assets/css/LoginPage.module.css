@@ -51,6 +51,7 @@
 
 input::placeholder {
   color: #2c2c2c;
+  text-align: center;
 }
 
 .submitBtn {

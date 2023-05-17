@@ -1,0 +1,44 @@
+.detailWrapper {
+  min-height: calc(840px - 130px - 80px);
+}
+.detailWrapper h3 {
+  margin-top: 5rem;
+  font-size: 2rem;
+  word-break: keep-all;
+}
+.detailImg {
+  width: 212px;
+  height: 212px;
+  border-radius: 50%;
+  background-color: gray;
+  margin-top: 3rem;
+}
+
+.detailWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.detailItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.starIco {
+  width: 3rem;
+  height: 3rem;
+  margin-top: 1rem;
+}
+
+.infoBox {
+  font-weight: 300;
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+
+.infoBox div {
+  margin-bottom: 1.5rem;
+}

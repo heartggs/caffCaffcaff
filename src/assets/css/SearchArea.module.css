@@ -1,3 +1,7 @@
+.searchWrapper {
+  position: relative;
+}
+
 .formInput {
   position: relative;
   display: flex;
@@ -22,11 +26,49 @@
   padding: 0.5rem 2rem 0.5rem 0.8rem;
   border-radius: 0.3rem;
   border: none;
+  outline: none;
 }
 
 .searchButton {
   position: absolute;
-  right: 1.5rem;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.searchResult {
+  position: absolute;
+  background-color: rgb(197, 186, 170);
+  left: 4%;
+  border-radius: 0.3rem;
+  width: 96%;
+}
+
+.searchResult li {
+  padding: 0.8rem 0.5rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.searchResult li:hover,
+.searchResult li a:focus {
+  background-color: rgba(128, 109, 97, 0.5);
+  border-radius: 0.3rem;
+  outline: none;
+}
+.searchResult a {
+  text-decoration: none;
+  color: #2c2c2c;
+}
+
+.inputForm {
+  position: relative;
+}
+
+.searchBtn {
   width: 1.3rem;
   height: 1.3rem;
 }

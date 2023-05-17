@@ -5,10 +5,13 @@
   align-items: center;
   justify-content: center;
 }
-
-.circleImg {
-  width: 76px;
-  height: 76px;
+.contentWrapper a {
+  text-decoration: none;
+  color: #2c2c2c;
+}
+.contentWrapper .circleImg {
+  width: 5rem;
+  height: 5rem;
   background-color: gray;
   margin-right: 2rem;
   border-radius: 50%;
@@ -26,7 +29,42 @@
 }
 
 .favoriteIcon {
-  height: 35px;
-  width: 35px;
+  height: 2.5rem;
+  width: 2.5rem;
   margin-right: 2rem;
+}
+
+.textStyle {
+  width: 13rem;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+}
+
+.pagination button {
+  border: none;
+  background-color: transparent;
+  margin-right: 2rem;
+  font-size: 1rem;
+  font-weight: 300;
+  color: gray;
+}
+
+.pagination button:last-child {
+  margin-right: 0;
+}
+
+button.active {
+  color: #ee7828;
+}
+
+.item {
+  display: flex;
+  align-items: center;
 }
