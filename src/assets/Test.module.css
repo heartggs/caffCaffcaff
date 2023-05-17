@@ -73,6 +73,7 @@ label:first-child {
 .userInput > span {
   text-align: center;
   color: #ef1616;
+  font-size: 0.5rem;
 }
 
 .userType {

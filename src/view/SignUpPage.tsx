@@ -154,6 +154,7 @@ export default function Test() {
                     "숫자, 영문 대문자, 소문자, 특수문자를 포함한 8글자 이상이어야 합니다.",
                 },
               })}
+              type="password"
               placeholder="비밀번호를 입력해주세요"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
