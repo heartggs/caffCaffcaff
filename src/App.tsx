@@ -1,4 +1,4 @@
-import "./app.css";
+import "./assets/css/App.css";
 import MainPage from "./view/MainPage";
 import SignUpPage from "./view/SignUpPage";
 import SearchPage from "./view/SearchPage";
