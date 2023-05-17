@@ -3,8 +3,8 @@ import { deleteField, doc, getDoc, updateDoc } from "firebase/firestore";
 import { AiFillStar } from "react-icons/ai";
 import { db } from "../Firebase";
 import { useEffect, useState } from "react";
-import { getAuth, onAuthStateChanged } from "firebase/auth";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { getAuth } from "firebase/auth";
+import { Link, useNavigate } from "react-router-dom";
 
 interface Drink {
   name: string;
@@ -15,24 +15,12 @@ interface Drink {
 
 export default function Favorite() {
   const [favorite, SetFavorite] = useState<Drink[]>([]);
-  const [isFavorite, setIsFavorit] = useState(true);
-  const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
 
   const auth = getAuth();
 
-  onAuthStateChanged(auth, (user) => {
-    if (user) {
-      const user = auth.currentUser;
-      const uid = user?.uid;
-    } else {
-      // User is signed out
-    }
-  });
-
   async function getFavorite() {
     const user = auth.currentUser;
-    const uid = user?.uid;
     if (!user) {
       navigate("/canYouJoinUs");
       return;
@@ -71,7 +59,6 @@ export default function Favorite() {
   };
 
   const handleClick = (id: number) => {
-    console.log(id);
     handelDelteFav(id);
   };
 
@@ -94,7 +81,7 @@ export default function Favorite() {
           />
           <AiFillStar
             className={styles.favoriteIcon}
-            color={isFavorite ? "#ee7828" : "gray"}
+            color="#ee7828"
             onClick={() => handleClick(favorite.id)}
           />
           <Link to={`/drink/${favorite.id}`}>

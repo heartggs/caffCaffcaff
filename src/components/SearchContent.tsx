@@ -3,7 +3,7 @@ import styles from "../assets/css/SearchContent.module.css";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../Firebase";
 import { getDownloadURL, getStorage, ref } from "firebase/storage";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Loading from "../components/Loading";
 
 interface Drink {
@@ -17,8 +17,7 @@ export default function SearchPage() {
   const [drinks, setDrinks] = useState<Drink[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const [drinksPerPage, setDrinksPerPage] = useState<number>(5);
-  const { id } = useParams<{ id: string }>();
+  const drinksPerPage = 5;
 
   useEffect(() => {
     async function fetchDrinks() {
@@ -78,7 +77,7 @@ export default function SearchPage() {
               <button
                 key={number}
                 className={currentPage === number ? styles.active : ""}
-                onClick={(id) => setCurrentPage(number)}
+                onClick={() => setCurrentPage(number)}
               >
                 {number}
               </button>

@@ -26,7 +26,7 @@ export default function LoginPage() {
   function handleGoogleLogin() {
     const provider = new GoogleAuthProvider(); // provider를 구글로 설정
     signInWithPopup(auth, provider) // popup을 이용한 signup
-      .then((data) => {
+      .then(() => {
         navigate("/");
       })
       .catch((err) => {

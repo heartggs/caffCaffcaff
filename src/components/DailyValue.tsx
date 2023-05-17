@@ -8,7 +8,6 @@ interface DailyValueProps {
 }
 
 export default function DailyValue(props: DailyValueProps) {
-  const [howCaffiene, setHowCaffiene] = useState<string | null>("");
   const [caffeineIntake, setCaffeineIntake] = useState(0);
 
   useEffect(() => {
@@ -19,7 +18,6 @@ export default function DailyValue(props: DailyValueProps) {
         const userDocSnap = await getDoc(userDocRef);
         if (userDocSnap.exists()) {
           const userData = userDocSnap.data();
-          setHowCaffiene(userData?.howCaffiene ?? "");
           const userType = userData?.userType;
           const weight = userData?.weight;
           if (userType === "성인") {
@@ -38,8 +36,6 @@ export default function DailyValue(props: DailyValueProps) {
             );
           }
         }
-      } else {
-        setHowCaffiene(null);
       }
     });
     return unsubscribe;
