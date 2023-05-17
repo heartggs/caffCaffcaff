@@ -71,14 +71,14 @@ export default function LoginPage() {
             </button>
           </form>
           <div className={styles.easyLogin}>
-            <p>간편로그인하기</p>
             <button onClick={handleGoogleLogin}>
+              <span>간편로그인하기</span>
               <FcGoogle className={styles.googleLogin} />
             </button>
           </div>
           <div className={styles.textArea}>
             <p>비밀번호를 잊어버리셨나요?</p>
-            <Link to="/signUp">
+            <Link to="/signUp" className={styles.linkNone}>
               <p>회원이 아니신가요?</p>
             </Link>
           </div>
